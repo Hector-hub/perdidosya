@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "users": {
+      ".indexOn": ["type", "added_by"],
+      "$user_id": {
+        ".write":"(auth != null && ($user_id === auth.uid || data.child('added_by').val()===auth.uid))||(data.child('is_active').val()!=null)"
+      },
+      ".read": true
+    },
+    "tips":{
+      ".read": true
+    },
+    "ads":{
+      ".read": true
+      
+    }
+     
+  }
+}
