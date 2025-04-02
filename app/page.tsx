@@ -43,7 +43,7 @@ export default function Home() {
       <section className="py-12 md:py-20 text-center">
         <div className="flex justify-center mb-6">
           <Image
-            src="/images/logo.webp"
+            src="/images/logo-no-bg.png"
             alt="PerdidosYa! Logo"
             width={100}
             height={100}

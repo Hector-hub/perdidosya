@@ -131,7 +131,7 @@ export function Navbar() {
             </Button>
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/images/logo.webp"
+                src="/images/logo-no-bg.png"
                 alt="PerdidosYa! Logo"
                 width={40}
                 height={40}
