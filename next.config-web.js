@@ -1,15 +1,5 @@
 /** @type {import('next').NextConfig} */
-
-const withPWA = require("next-pwa")({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-  // disable: process.env.NEXT_PUBLIC_PWA_ENABLED === "false",
-});
-
-module.exports = withPWA({
-  reactStrictMode: true, // Habilita el modo estricto de React
-  swcMinify: true,
+const nextConfig = {
   images: {
     remotePatterns: [
       {
@@ -42,4 +32,7 @@ module.exports = withPWA({
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-});
+  // ...any other existing config
+};
+
+module.exports = nextConfig;

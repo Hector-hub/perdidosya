@@ -37,22 +37,24 @@ export default function PoliciesLayout({
             <div className="bg-card rounded-lg shadow-lg p-6">
               <h2 className="text-xl font-semibold mb-4">Políticas</h2>
               <nav className="space-y-2">
-                {policies.map((policy) => (
-                  <Link
-                    key={policy.href}
-                    href={policy.href}
-                    className={`block p-3 rounded-lg transition-colors ${
-                      pathname === policy.href
-                        ? "bg-primary text-primary-foreground"
-                        : "hover:bg-muted"
-                    }`}
-                  >
-                    <div className="font-medium">{policy.title}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {policy.description}
-                    </div>
-                  </Link>
-                ))}
+                {policies.map((policy) => {
+                  return (
+                    <Link
+                      key={policy.href}
+                      href={policy.href}
+                      className={`block p-3 rounded-lg transition-colors ${
+                        pathname === `${policy.href}/`
+                          ? "bg-primary text-primary-foreground"
+                          : "hover:bg-muted"
+                      }`}
+                    >
+                      <div className="font-medium">{policy.title}</div>
+                      <div className="text-sm text-muted-foreground">
+                        {policy.description}
+                      </div>
+                    </Link>
+                  );
+                })}
               </nav>
             </div>
           </div>

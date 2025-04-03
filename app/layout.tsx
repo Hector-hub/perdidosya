@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "PerdidosYa! - Objetos Perdidos y Encontrados",
   description:
     "Una plataforma para estudiantes universitarios para publicar sobre objetos perdidos y encontrados",
-  generator: "v0.dev",
+  generator: "hecrey",
 };
 
 export default function RootLayout({
@@ -24,6 +24,11 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light">

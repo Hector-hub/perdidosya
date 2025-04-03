@@ -102,7 +102,9 @@ export function Navbar() {
     setIsLoginModalOpen(true);
   };
 
-  const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => {
+    return pathname !== "/" ? pathname === `${path}/` : pathname === path;
+  };
 
   return (
     <>
