@@ -40,7 +40,7 @@ export function Footer() {
                 href="https://github.com/hector-hub"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black hover:text-gray-500 "
+                className="text-secondary-foreground hover:text-gray-500 "
               >
                 Hecrey
               </a>
@@ -51,14 +51,14 @@ export function Footer() {
                 href="/LICENSE-2.0.txt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black hover:text-gray-500 text-sm  flex items-center"
+                className="text-secondary-foreground hover:text-gray-500 text-sm  flex items-center"
               >
                 Licence Apache-2.0
               </a>
-              <span className="text-black">•</span>
+              <span className="text-secondary-foreground">•</span>
               <a
                 href="https://github.com/Hector-hub/perdidosya"
-                className="text-black hover:text-gray-500 text-sm  flex items-center"
+                className="text-secondary-foreground hover:text-gray-500 text-sm  flex items-center"
                 target="_blank"
                 rel="noopener noreferrer"
               >
