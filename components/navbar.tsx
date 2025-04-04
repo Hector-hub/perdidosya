@@ -14,6 +14,7 @@ import {
   FolderSearch,
   User,
   ChevronDown,
+  Book,
 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
@@ -169,6 +170,15 @@ export function Navbar() {
                 <FolderSearch className="h-4 w-4" />
                 Catálogo
               </Link>
+              <Link
+                href="/about"
+                className={`text-sm font-medium flex items-center gap-2 ${
+                  isActive("/about") ? "text-primary" : "text-muted-foreground"
+                }`}
+              >
+                <Book className="h-4 w-4" />
+                Historia
+              </Link>
             </nav>
             <div className="hidden md:flex items-center gap-4">
               <Link
@@ -192,6 +202,17 @@ export function Navbar() {
               >
                 <FolderSearch className="h-4 w-4" />
                 Catálogo
+              </Link>
+              <Link
+                href="/about"
+                className={`text-sm font-medium flex items-center gap-1 px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground ${
+                  isActive("/about")
+                    ? "bg-accent text-accent-foreground"
+                    : "text-muted-foreground"
+                }`}
+              >
+                <Book className="h-4 w-4" />
+                Historia
               </Link>
             </div>
             <div className="flex items-center gap-2 ml-4">
