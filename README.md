@@ -144,6 +144,6 @@ Este proyecto está licenciado bajo la Licencia Apache 2.0 - ver el archivo [LIC
 
 ## 📞 Contacto
 
-Hector Hub - [@hector_hub](https://twitter.com/hector_hub) - plurals.standby.7k@icloud.com
+Instagram - [@\_hecrey](https://www.instagram.com/_hecrey/) - plurals.standby.7k@icloud.com
 
 Link del Proyecto: [https://github.com/hector-hub/perdidosya](https://github.com/hector-hub/perdidosya)
