@@ -17,7 +17,7 @@ Una plataforma web moderna para ayudar a la comunidad universitaria a encontrar 
 
 - **Frontend:**
 
-  - Next.js 14
+  - Next.js 15
   - React
   - TypeScript
   - Tailwind CSS
