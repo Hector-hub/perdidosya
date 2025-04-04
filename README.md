@@ -40,7 +40,7 @@ Una plataforma web moderna para ayudar a la comunidad universitaria a encontrar 
 ## 📋 Prerrequisitos
 
 - Node.js 18.x o superior
-- npm o yarn
+- pnpm
 - Cuenta de Firebase
 - Navegador moderno
 
@@ -49,36 +49,53 @@ Una plataforma web moderna para ayudar a la comunidad universitaria a encontrar 
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/perdidosya.git
+   git clone https://github.com/Hector-hub/perdidosya.git
    cd perdidosya
    ```
 
 2. Instala las dependencias:
 
    ```bash
-   npm install
-   # o
-   yarn install
+   pnpm install
    ```
 
 3. Crea un archivo `.env.local` en la raíz del proyecto con las siguientes variables:
 
-   ```env
-   NEXT_PUBLIC_FIREBASE_API_KEY=tu-api-key
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=tu-auth-domain
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=tu-project-id
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=tu-storage-bucket
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=tu-sender-id
-   NEXT_PUBLIC_FIREBASE_APP_ID=tu-app-id
+   ```plaintext
+
    ```
+
+# Firebase Configuration
+
+NEXT_PUBLIC_FIREBASE_API_KEY="YOUR_FIREBASE_API_KEY"
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="YOUR_FIREBASE_AUTH_DOMAIN"
+NEXT_PUBLIC_FIREBASE_PROJECT_ID="YOUR_FIREBASE_PROJECT_ID"
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="YOUR_FIREBASE_STORAGE_BUCKET"
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="YOUR_FIREBASE_MESSAGING_SENDER_ID"
+NEXT_PUBLIC_FIREBASE_APP_ID="YOUR_FIREBASE_APP_ID"
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID="YOUR_FIREBASE_MEASUREMENT_ID"
+
+# EmailJS Configuration
+
+NEXT_PUBLIC_EMAILJS_SERVICE_ID="YOUR_EMAILJS_SERVICE_ID"
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID="YOUR_EMAILJS_TEMPLATE_ID"
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY="YOUR_EMAILJS_PUBLIC_KEY"
+
+# Base URL
+
+NEXT_PUBLIC_BASE_URL="http://localhost:3000"
+
+# PWA Configuration
+
+NEXT_PUBLIC_PWA_ENABLED="false"
+
+````
 
 4. Inicia el servidor de desarrollo:
 
    ```bash
-   npm run dev
-   # o
-   yarn dev
-   ```
+   pnpm run dev
+````
 
 5. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 

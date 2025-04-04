@@ -147,7 +147,10 @@ function ProfilePage() {
 
       // Validar contenido de la imagen
       const imageModerationService = ImageModerationService.getInstance();
-      const validation = await imageModerationService.validateImage(file);
+      const validation = await imageModerationService.validateImage(
+        file,
+        false
+      );
 
       if (!validation.isValid) {
         const fileInput = document.getElementById(
@@ -179,7 +182,7 @@ function ProfilePage() {
 
       Swal.fire({
         title: "Foto actualizada",
-        text: "La foto de perfil se ha actualizado correctamente",
+        text: "La foto de perfil se ha cargado correctamente, guarda los cambios para que se aplique",
         icon: "success",
         timer: 1500,
         showConfirmButton: false,

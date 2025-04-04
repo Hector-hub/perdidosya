@@ -52,7 +52,10 @@ export class ImageModerationService {
     });
   }
 
-  public async validateImage(file: File): Promise<{
+  public async validateImage(
+    file: File,
+    isPost: boolean = true
+  ): Promise<{
     isValid: boolean;
     message?: string;
   }> {
@@ -66,7 +69,23 @@ export class ImageModerationService {
         messages: [
           {
             role: "system",
-            content: `You are an image moderation system. Analyze the provided image and return a structured response indicating whether the image is appropriate for a lost and found platform. Consider the following categories:
+            content: `
+            You are an image moderation system. Analyze the provided image and return a structured response indicating whether the image is appropriate for a PerdidosYa! platform. 
+            ${
+              isPost
+                ? `The platform is a place where people can find lost and found items.
+            The images should be of items that are lost and found.
+            The images should not be of people or pets.
+            The images should not be of violence or gore.
+            The images should not be of hate speech or discriminatory content.
+            The images should not be of drug-related content.
+            The images should not be of weapons or dangerous items.
+            The images should not be of promotional content.
+            The images should not be of other inappropriate content.`
+                : ""
+            }
+
+            Consider the following categories:
             - sexual: Contains sexually explicit or suggestive content
             - violence: Contains violent or disturbing content
             - hate: Contains hate speech or discriminatory content
