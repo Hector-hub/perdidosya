@@ -276,7 +276,7 @@ function ItemDetailContent() {
             item.authorId === currentUser?.uid ? handleDeleteItem : undefined
           }
           currentUser={currentUser}
-          noLink={true}
+          isDetails={true}
         />
       </Card>
     </div>

@@ -46,14 +46,18 @@ export function Footer() {
               </a>
             </div>
             <div className="text-sm text-muted-foreground text-center flex items-center gap-1">
-              <Shield className="w-4 h-4" />
               <a
-                href="/LICENSE-2.0.txt"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://creativecommons.org/licenses/by-nc/4.0/"
                 className="text-secondary-foreground hover:text-gray-500 text-sm  flex items-center"
+                target="_blank"
+                rel="noopener"
               >
-                Licence Apache-2.0
+                <img
+                  src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+                  alt="Creative Commons"
+                  className="h-4 w-4 mr-1 inline-block"
+                />
+                CC BY-NC 4.0
               </a>
               <span className="text-secondary-foreground">•</span>
               <a

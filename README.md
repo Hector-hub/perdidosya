@@ -130,7 +130,10 @@ Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
 
 ## 📄 Licencia
 
-Este proyecto está licenciado bajo la Licencia Apache 2.0 - ver el archivo [LICENSE-2.0.txt](LICENSE-2.0.txt) para más detalles.
+Este proyecto está licenciado bajo la [Licencia Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.es).
+
+Puedes compartirlo y modificarlo para fines **no comerciales**, siempre que otorgues crédito al autor original.  
+Para usos comerciales, por favor contáctame.
 
 ## 👥 Autores
 

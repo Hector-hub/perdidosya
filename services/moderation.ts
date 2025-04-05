@@ -170,6 +170,7 @@ export class ContentModerationService {
   1. Palabras de esta lista: ${inappropriateWords.join(", ")}
   2. Variaciones creativas (ej: "s1ng4", "m4m4g3v0")
   3. Insultos similares no listados
+  4. Cualquier contenido ofensivo o inapropiado.
   
   Responde SOLO con un JSON válido: 
   { "isAppropriate": boolean } 
@@ -186,10 +187,10 @@ export class ContentModerationService {
 
     try {
       const response = JSON.parse(chatResponse?.choices[0].message.content);
-      return !response.isAppropriate; // Convertir a flag de inapropiado
+      return response.isAppropriate; // Convertir a flag de inapropiado
     } catch (e) {
       console.error("Error parsing response:", e);
-      return true; // Por defecto seguro si hay error
+      return false; // Por defecto seguro si hay error
     }
   };
   private async moderateContent(content: string): Promise<ModerationResult> {
@@ -231,17 +232,16 @@ export class ContentModerationService {
     message?: string;
   }> {
     try {
-      const result = await this.moderateContent(content);
+      // const result = await this.moderateContent(content);
       const isAppropriateLatin = await this.checkInappropriateWithMistral(
         content
       );
-      console.log(isAppropriateLatin);
-      if (!result.isAppropriate || isAppropriateLatin) {
+      // console.log(isAppropriateLatin);
+      if (!isAppropriateLatin) {
         // Determine which categories were flagged
-        const flaggedCategories = Object.entries(result.categories)
-          .filter(([_, value]) => value)
-          .map(([key]) => key);
-
+        // const flaggedCategories = Object.entries(result.categories)
+        //   .filter(([_, value]) => value)
+        //   .map(([key]) => key);
         return {
           isValid: false,
           message: `El contenido contiene material inapropiado.`,

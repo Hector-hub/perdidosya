@@ -43,7 +43,7 @@ interface ItemCardProps {
   onDeleteComment?: (itemId: string, commentId: string) => void;
   onDeleteItem?: (itemId: string) => void;
   currentUser?: any;
-  noLink?: boolean;
+  isDetails?: boolean;
 }
 
 export function ItemCard({
@@ -54,7 +54,7 @@ export function ItemCard({
   onDeleteComment,
   onDeleteItem,
   currentUser: propCurrentUser,
-  noLink = false,
+  isDetails = false,
 }: ItemCardProps) {
   const [showComments, setShowComments] = useState(false);
   const [newComment, setNewComment] = useState("");
@@ -352,7 +352,7 @@ export function ItemCard({
 
   return (
     <Card className="overflow-hidden">
-      <a href={noLink ? undefined : `/items?id=${item.id}`} key={item.id}>
+      <a href={isDetails ? undefined : `/items?id=${item.id}`} key={item.id}>
         <div className="relative h-48">
           <Image
             src={item.imageUrl || "/placeholder.svg"}
@@ -396,7 +396,11 @@ export function ItemCard({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3">
+          <p
+            className={`text-sm text-gray-600 dark:text-gray-300 ${
+              isDetails ? "" : "line-clamp-3"
+            }`}
+          >
             {item.description}
           </p>
         </CardContent>
